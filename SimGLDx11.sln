@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimGLDx11", "SimGLDx11\SimGLDx11.vcxproj", "{D724D0A2-7429-404D-B7BA-DE447BF17844}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D13A65FB-F5EB-42E1-8520-C5B6A03F274A} = {D13A65FB-F5EB-42E1-8520-C5B6A03F274A}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gzcom2", "gzcom-dll\gzcom-dll\gzcom2.vcxproj", "{D13A65FB-F5EB-42E1-8520-C5B6A03F274A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,14 @@ Global
 		{D724D0A2-7429-404D-B7BA-DE447BF17844}.Release|x64.Build.0 = Release|x64
 		{D724D0A2-7429-404D-B7BA-DE447BF17844}.Release|x86.ActiveCfg = Release|Win32
 		{D724D0A2-7429-404D-B7BA-DE447BF17844}.Release|x86.Build.0 = Release|Win32
+		{D13A65FB-F5EB-42E1-8520-C5B6A03F274A}.Debug|x64.ActiveCfg = Debug|x64
+		{D13A65FB-F5EB-42E1-8520-C5B6A03F274A}.Debug|x64.Build.0 = Debug|x64
+		{D13A65FB-F5EB-42E1-8520-C5B6A03F274A}.Debug|x86.ActiveCfg = Debug|Win32
+		{D13A65FB-F5EB-42E1-8520-C5B6A03F274A}.Debug|x86.Build.0 = Debug|Win32
+		{D13A65FB-F5EB-42E1-8520-C5B6A03F274A}.Release|x64.ActiveCfg = Release|x64
+		{D13A65FB-F5EB-42E1-8520-C5B6A03F274A}.Release|x64.Build.0 = Release|x64
+		{D13A65FB-F5EB-42E1-8520-C5B6A03F274A}.Release|x86.ActiveCfg = Release|Win32
+		{D13A65FB-F5EB-42E1-8520-C5B6A03F274A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
