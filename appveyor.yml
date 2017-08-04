@@ -15,4 +15,4 @@ configuration:
 
 build:
         project: SimGLRef4.sln
-        verbosity: detailed
+        verbosity: minimal
