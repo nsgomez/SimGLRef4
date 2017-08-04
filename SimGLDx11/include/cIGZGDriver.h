@@ -1,11 +1,12 @@
 #pragma once
 #include <cIGZUnknown.h>
+#include "sGDMode.h"
 
 class cIGZGDriver : public cIGZUnknown
 {
 	public:
-		virtual bool DrawArrays(uint32_t gdPrimType, int32_t, int32_t) = 0;
-		virtual bool DrawElements(uint32_t gdPrimType, int32_t, uint32_t gdType, void const*) = 0;
+		virtual bool DrawArrays(uint32_t gdPrimType, int32_t first, int32_t count) = 0;
+		virtual bool DrawElements(uint32_t gdPrimType, uint32_t count, uint32_t gdType, void const* indices) = 0;
 		virtual bool InterleavedArrays(int32_t gdVertexFormat, int32_t, void const*) = 0;
 
 		virtual uint32_t MakeVertexFormat(uint32_t, intptr_t gdElementTypePtr) = 0;
@@ -46,7 +47,7 @@ class cIGZGDriver : public cIGZUnknown
 		virtual uint32_t AlphaMultiplier(float a) = 0;
 		virtual uint32_t EnableVertexColors(bool, bool) = 0;
 
-		virtual uint32_t GenTextures(int32_t, uint32_t*) = 0;
+		virtual void GenTextures(int32_t, uint32_t*) = 0;
 		virtual uint32_t DeleteTextures(int32_t, uint32_t const*) = 0;
 		virtual bool IsTexture(uint32_t) = 0;
 		virtual uint32_t PrioritizeTextures(int32_t, uint32_t const*, float const*) = 0;
@@ -57,8 +58,8 @@ class cIGZGDriver : public cIGZUnknown
 		virtual uint32_t LoadIdentity(void) = 0;
 
 		virtual uint32_t Flush(void) = 0;
-		virtual uint32_t Enable(uint32_t gdDriverState) = 0;
-		virtual uint32_t Disable(uint32_t gdDriverState) = 0;
+		virtual void Enable(uint32_t gdDriverState) = 0;
+		virtual void Disable(uint32_t gdDriverState) = 0;
 		virtual bool IsEnabled(uint32_t gdDriverState) = 0;
 		virtual bool GetBoolean(uint32_t gdParameter, bool*) = 0;
 		virtual bool GetInteger(uint32_t gdParameter, int32_t*) = 0;
@@ -68,10 +69,10 @@ class cIGZGDriver : public cIGZUnknown
 		virtual uint32_t TexStage(uint32_t) = 0;
 		virtual uint32_t TexStageCoord(uint32_t gdTexCoordSource) = 0;
 		virtual uint32_t TexStageMatrix(float const*, uint32_t, uint32_t, uint32_t gdTexMatFlags) = 0;
-		virtual uint32_t TexStageCombine(uint32_t gdTexStageCombineParamType, uint32_t gdTexStageCombineModeParam) = 0;
+		virtual void TexStageCombine(uint32_t gdTexStageCombineParamType, uint32_t gdTexStageCombineModeParam) = 0;
 		virtual uint32_t TexStageCombine(float gdTexStageCombineSourceParamType, float gdTexStageCombineSourceParam) = 0;
-		virtual uint32_t TexStageCombine(void* gdTexStageCombineOperandParamType, uint32_t gdBlend) = 0;
-		virtual uint32_t TexStageCombine(uint32_t gdTexStageCombineScaleParamType, void* gdTexStageCombineScaleParam) = 0;
+		virtual void TexStageCombine(void* gdTexStageCombineOperandParamType, uint32_t gdBlend) = 0;
+		virtual void TexStageCombine(uint32_t gdTexStageCombineScaleParamType, void* gdTexStageCombineScaleParam) = 0;
 
 		virtual uint32_t SetTexture(uint32_t, uint32_t) = 0;
 		virtual intptr_t GetTexture(uint32_t) = 0;
@@ -80,8 +81,8 @@ class cIGZGDriver : public cIGZUnknown
 		virtual uint32_t SetCombiner(uint32_t const& gdCombiner, uint32_t) = 0;
 
 		virtual uint32_t CountVideoModes(void) = 0;
-		virtual bool GetVideoModeInfo(uint32_t, uint32_t& gdMode) = 0;
-		virtual bool GetVideoModeInfo(uint32_t& gdMode) = 0;
+		virtual bool GetVideoModeInfo(uint32_t, sGDMode& gdMode) = 0;
+		virtual bool GetVideoModeInfo(sGDMode& gdMode) = 0;
 		virtual bool SetVideoMode(int32_t, void*, bool, bool) = 0;
 		
 		virtual uint32_t PolygonOffset(uint32_t) = 0;

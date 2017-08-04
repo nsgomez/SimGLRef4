@@ -8,15 +8,15 @@
 #include <cRZCOMDllDirector.h>
 #include <GZServPtrs.h>
 #include <Windows.h>
-#include "../include/cGZGLDx11Driver.h"
+#include "../include/cGZGLRef4Driver.h"
 
-static const uint32_t kGLDx11DriverPluginCOMDirectorID = 0x8bbd9623;
+static const uint32_t kGLRef4DriverPluginCOMDirectorID = 0x8bbd9623;
 
-class cGZGLDx11DriverPluginCOMDirector : public cRZCOMDllDirector
+class cGZGLRef4DriverPluginCOMDirector : public cRZCOMDllDirector
 {
 	public:
 		uint32_t GetDirectorID() const {
-			return kGLDx11DriverPluginCOMDirectorID;
+			return kGLRef4DriverPluginCOMDirectorID;
 		}
 
 		bool PreFrameWorkInit() {
@@ -38,7 +38,7 @@ class cGZGLDx11DriverPluginCOMDirector : public cRZCOMDllDirector
 		}
 
 		bool InitializeCOM(cIGZCOM* pCOM, const cIGZString& sLibraryPath) {
-			AddCls(cGZGLDx11Driver::kGLDx11DriverGZCLSID, cGZGLDx11Driver::FactoryFunctionPtr2);
+			AddCls(cGZGLRef4Driver::kGLRef4DriverGZCLSID, cGZGLRef4Driver::FactoryFunctionPtr2);
 			return cRZCOMDllDirector::InitializeCOM(pCOM, sLibraryPath);
 		}
 		
@@ -56,6 +56,6 @@ class cGZGLDx11DriverPluginCOMDirector : public cRZCOMDllDirector
 };
 
 cRZCOMDllDirector* RZGetCOMDllDirector() {
-	static cGZGLDx11DriverPluginCOMDirector sDirector;
+	static cGZGLRef4DriverPluginCOMDirector sDirector;
 	return &sDirector;
 }

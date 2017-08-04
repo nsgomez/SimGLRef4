@@ -21,12 +21,18 @@
     <ClInclude Include="include\cIGZGDriver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\cGZGLDx11Driver.h">
+    <ClInclude Include="include\cGZGLRef4Driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sGDMode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cGZGLRef4Driver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
