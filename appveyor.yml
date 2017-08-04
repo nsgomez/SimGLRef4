@@ -16,3 +16,10 @@ configuration:
 build:
         project: SimGLRef4.sln
         verbosity: minimal
+
+artifacts:
+        - path: Debug\SimGLRef4.dll
+          name: Debug
+
+        - path: Release\SimGLRef4.dll
+          name: Release
