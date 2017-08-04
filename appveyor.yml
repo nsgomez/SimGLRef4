@@ -14,5 +14,5 @@ configuration:
         - Release
 
 build:
-        project: SimGLDx11.sln
+        project: SimGLRef4.sln
         verbosity: detailed
