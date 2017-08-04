@@ -164,22 +164,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\glfw\GLFW.vcxproj">
-      <Project>{b020aab8-452c-4775-a461-31684e3aa426}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\gzcom-dll\gzcom-dll\gzcom2.vcxproj">
       <Project>{d13a65fb-f5eb-42e1-8520-c5b6a03f274a}</Project>
     </ProjectReference>
+    <ProjectReference Include="GLFW.vcxproj">
+      <Project>{b020aab8-452c-4775-a461-31684e3aa426}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\cGZGLRef4Driver.h" />
-    <ClInclude Include="include\cIGZBufferRegionExtension.h" />
-    <ClInclude Include="include\cIGZGDriver.h" />
-    <ClInclude Include="include\sGDMode.h" />
+    <ClInclude Include="..\SimGLRef4\include\cGZGLRef4Driver.h" />
+    <ClInclude Include="..\SimGLRef4\include\cIGZBufferRegionExtension.h" />
+    <ClInclude Include="..\SimGLRef4\include\cIGZGDriver.h" />
+    <ClInclude Include="..\SimGLRef4\include\sGDMode.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\cGZGLRef4Driver.cpp" />
-    <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="..\SimGLRef4\src\cGZGLRef4Driver.cpp" />
+    <ClCompile Include="..\SimGLRef4\src\dllmain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

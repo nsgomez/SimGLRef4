@@ -15,24 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\cIGZBufferRegionExtension.h">
+    <ClInclude Include="..\SimGLRef4\include\cIGZBufferRegionExtension.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\cIGZGDriver.h">
+    <ClInclude Include="..\SimGLRef4\include\cIGZGDriver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\cGZGLRef4Driver.h">
+    <ClInclude Include="..\SimGLRef4\include\sGDMode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\sGDMode.h">
+    <ClInclude Include="..\SimGLRef4\include\cGZGLRef4Driver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\dllmain.cpp">
+    <ClCompile Include="..\SimGLRef4\src\cGZGLRef4Driver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\cGZGLRef4Driver.cpp">
+    <ClCompile Include="..\SimGLRef4\src\dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

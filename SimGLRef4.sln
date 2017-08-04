@@ -3,14 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimGLDx11", "SimGLDx11\SimGLDx11.vcxproj", "{D724D0A2-7429-404D-B7BA-DE447BF17844}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimGLRef4", "projects\SimGLRef4.vcxproj", "{D724D0A2-7429-404D-B7BA-DE447BF17844}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D13A65FB-F5EB-42E1-8520-C5B6A03F274A} = {D13A65FB-F5EB-42E1-8520-C5B6A03F274A}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gzcom2", "gzcom-dll\gzcom-dll\gzcom2.vcxproj", "{D13A65FB-F5EB-42E1-8520-C5B6A03F274A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLFW", "glfw\GLFW.vcxproj", "{B020AAB8-452C-4775-A461-31684E3AA426}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLFW", "projects\GLFW.vcxproj", "{B020AAB8-452C-4775-A461-31684E3AA426}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
